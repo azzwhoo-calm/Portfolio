@@ -1,0 +1,131 @@
+/* ============================================================================
+   PORTFOLIO – Global Styles & Tailwind v4 Import
+   ============================================================================
+   This file imports Tailwind CSS v4 and defines custom CSS variables (tokens)
+   for the dark-mode portfolio theme. All color tokens use HSL for easy tuning.
+   
+   🎨  COLOR PALETTE
+   ─────────────────
+   --bg-primary       Deep charcoal background
+   --bg-secondary     Slightly lighter card/section backgrounds
+   --bg-tertiary      Hover / elevated surfaces
+   --accent           Slate-blue accent (used for highlights, links, borders)
+   --accent-glow      Lighter accent for glowing effects
+   --text-primary     Crisp white text
+   --text-secondary   Muted grey for body copy
+   --text-tertiary    Even more muted, for labels & captions
+   
+   To change the overall theme, adjust the HSL values below.
+   ============================================================================ */
+
+@import "tailwindcss";
+
+/* ── Custom Theme Tokens ─────────────────────────────────────────────────── */
+@theme {
+  --color-bg-primary: #0a0a0f;
+  --color-bg-secondary: #12121a;
+  --color-bg-tertiary: #1a1a2e;
+  --color-accent: #4a6cf7;
+  --color-accent-glow: #6d8cff;
+  --color-accent-muted: #2a3a8a;
+  --color-text-primary: #e8e8f0;
+  --color-text-secondary: #8888a0;
+  --color-text-tertiary: #555570;
+  --color-border: #1e1e30;
+  --color-border-accent: #2a3a6a;
+}
+
+/* ── Google Fonts loaded via <link> in index.html ─────────────────────────── */
+
+/* ── Base Resets ──────────────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* ── Selection ────────────────────────────────────────────────────────────── */
+::selection {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+/* ── Scrollbar ────────────────────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-accent-muted);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}
+
+/* ── Utility: Monospace font class ────────────────────────────────────────── */
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* ── Subtle Background Grid Pattern ───────────────────────────────────────── */
+.bg-grid {
+  background-image:
+    linear-gradient(rgba(74, 108, 247, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(74, 108, 247, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* ── Glow Keyframes ───────────────────────────────────────────────────────── */
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-slide-up {
+  animation: slide-up 0.8s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fade-in 1s ease-out forwards;
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
