@@ -129,3 +129,40 @@ body {
 .animate-float {
   animation: float 4s ease-in-out infinite;
 }
+
+/* ── Fluid Constraint System ─────────────────────────────────────────────── */
+
+/* Prevent any child from exceeding the viewport width */
+html {
+  overflow-x: hidden;
+}
+
+/* All media elements respect their containers */
+img, video, iframe, canvas, svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ── Mobile-first responsive adjustments (≤ 768px) ───────────────────────── */
+@media (max-width: 768px) {
+  /* Reduce large section padding on small screens */
+  section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* Constrain any elements that might escape the viewport */
+  .max-w-4xl,
+  .max-w-5xl,
+  .max-w-7xl {
+    max-width: 100%;
+  }
+
+  /* Prevent decorative positioned elements from causing scroll */
+  [class*="absolute"][class*="-right-"],
+  [class*="absolute"][class*="-left-"],
+  [class*="absolute"][class*="-top-"],
+  [class*="absolute"][class*="-bottom-"] {
+    overflow: hidden;
+  }
+}

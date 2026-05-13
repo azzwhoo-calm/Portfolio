@@ -57,13 +57,13 @@ const contactLinks = [
 export default function Footer() {
   return (
     <footer id="contact" className="relative mt-12 pt-28 pb-20 px-6 border-t border-border flex flex-col items-center w-full">
-      <div className="max-w-4xl w-full text-center">
+      <div className="max-w-4xl w-full flex flex-col items-center text-center">
         <h2 className="text-3xl sm:text-4xl font-bold text-text-primary mb-8">Let's Connect</h2>
-        <p className="text-text-secondary max-w-lg mb-16 mx-auto text-center" style={{marginTop: '5px', marginBottom: '35px', marginLeft: '175px' }}>
+        <p className="text-text-secondary max-w-lg mx-auto text-center" style={{marginTop: '5px', marginBottom: '35px' }}>
           Interested in performance engineering, game systems, or just want to chat about deterministic physics? I'd love to hear from you.
         </p>
 
-        <div className="flex flex-wrap justify-center gap-6 mb-24">
+        <div className="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-6 mb-24">
           {contactLinks.map((link) => (
             <a
               key={link.label}

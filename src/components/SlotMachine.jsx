@@ -104,7 +104,7 @@ export default function SlotMachine() {
 
   return (
     <div
-      className="group flex flex-col items-center justify-center p-6 bg-bg-secondary/40 backdrop-blur-md rounded-3xl border border-border shadow-2xl cursor-pointer transition-all duration-300 hover:border-accent/50 hover:shadow-accent/20 w-80 relative overflow-hidden"
+      className="group flex flex-col items-center justify-center p-6 bg-bg-secondary/40 backdrop-blur-md rounded-3xl border border-border shadow-2xl cursor-pointer transition-all duration-300 hover:border-accent/50 hover:shadow-accent/20 w-full max-w-80 relative overflow-hidden"
       onClick={spinReels}
     >
       {/* Decorative inner glow */}
@@ -134,7 +134,7 @@ export default function SlotMachine() {
         {reels.map((symbol, idx) => (
           <div
             key={idx}
-            className="w-16 h-20 flex items-center justify-center text-4xl bg-gradient-to-b from-bg-secondary to-bg-primary rounded-xl border border-white/5 shadow-lg overflow-hidden relative"
+            className="w-14 sm:w-16 h-16 sm:h-20 flex items-center justify-center text-3xl sm:text-4xl bg-gradient-to-b from-bg-secondary to-bg-primary rounded-xl border border-white/5 shadow-lg overflow-hidden relative"
           >
             <span
               className={isSpinning ? "animate-slot-spin" : "transform transition-transform duration-300"}

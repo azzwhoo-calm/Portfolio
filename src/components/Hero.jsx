@@ -230,7 +230,7 @@ export default function Hero() {
           <div className="relative p-8 rounded-3xl bg-bg-secondary/60 backdrop-blur-xl border border-white/10 shadow-2xl flex flex-col items-center">
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-text-tertiary mb-6">Key Achievements</p>
             
-            <div className="flex flex-wrap justify-center gap-6 sm:gap-10 w-full">
+            <div className="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-6 sm:gap-10 w-full">
               {/* Stat 1 */}
               <div className="flex flex-col items-center gap-3">
                 <motion.div 

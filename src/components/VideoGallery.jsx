@@ -106,7 +106,7 @@ export default function VideoGallery() {
         </div>
         <h2 style={{ marginTop: '35px' }} className="text-4xl sm:text-5xl font-bold tracking-tight text-text-primary mb-4">Project Showcase</h2>
         
-        <p className="text-text-secondary max-w-xl mx-auto text-center mt-6" style={{ marginBottom: '35px',marginLeft: '150px' }}>
+        <p className="text-text-secondary max-w-xl mx-auto text-center mt-6" style={{ marginBottom: '35px' }}>
           A closer look at the engineering challenges I've tackled — with breakdowns of the problem, approach, and measurable impact.
         </p>
       </div>
@@ -123,10 +123,10 @@ export default function VideoGallery() {
 
         <div className="w-full max-w-4xl relative">
           {/* Mobile Arrows */}
-          <div className="absolute top-1/2 -left-4 sm:hidden -translate-y-1/2 z-20">
+          <div className="absolute top-1/2 left-1 sm:hidden -translate-y-1/2 z-20">
              <button onClick={handlePrev} className="p-2 rounded-full bg-bg-primary border border-border text-text-primary hover:text-accent shadow-lg cursor-pointer"><ChevronLeft className="w-5 h-5"/></button>
           </div>
-          <div className="absolute top-1/2 -right-4 sm:hidden -translate-y-1/2 z-20">
+          <div className="absolute top-1/2 right-1 sm:hidden -translate-y-1/2 z-20">
              <button onClick={handleNext} className="p-2 rounded-full bg-bg-primary border border-border text-text-primary hover:text-accent shadow-lg cursor-pointer"><ChevronRight className="w-5 h-5"/></button>
           </div>
 

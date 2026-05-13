@@ -115,7 +115,7 @@ export default function Experience({ item, showHeader = false }) {
                 <motion.div
                   variants={cardVariants}
                   animate="animate"
-                  className="group p-8 md:p-10 rounded-2xl border border-border bg-bg-primary/80 backdrop-blur-md hover:border-border-accent hover:bg-bg-secondary/90 transition-all duration-500 flex flex-col items-center text-center shadow-xl shadow-black/20"
+                  className="group p-5 sm:p-8 md:p-10 rounded-2xl border border-border bg-bg-primary/80 backdrop-blur-md hover:border-border-accent hover:bg-bg-secondary/90 transition-all duration-500 flex flex-col items-center text-center shadow-xl shadow-black/20"
                 >
                   {/* Period & Type */}
                   <div className="flex flex-wrap items-center justify-center gap-3 mb-5">
@@ -153,7 +153,7 @@ export default function Experience({ item, showHeader = false }) {
                   </ul>
 
                   {/* Tech Badges */}
-                  <div className="flex flex-wrap justify-center gap-3">
+                  <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
                     {currItem.technologies.map((tech) => (
                       <span
                         key={tech}
