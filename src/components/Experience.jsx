@@ -52,7 +52,7 @@ export default function Experience({ item, showHeader = false }) {
   return (
     <section
       id="experience"
-      className="relative w-full min-h-screen flex flex-col justify-center items-center py-20 px-6 bg-bg-primary overflow-hidden"
+      className={`relative w-full min-h-screen flex flex-col justify-center items-center px-6 bg-bg-primary overflow-hidden ${showHeader ? 'pt-10 pb-20' : 'py-20'}`}
     >
       {/* ── Animated Ambient Background Image ────────────────────────── */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
@@ -73,17 +73,17 @@ export default function Experience({ item, showHeader = false }) {
       </div>
       {/* ── Section Header ─────────────────────────────────────────────── */}
       {showHeader && (
-        <div className="absolute top-8 md:top-16 left-1/2 -translate-x-1/2 w-full px-6 max-w-4xl flex flex-col items-center text-center z-20 pointer-events-none">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border-accent bg-bg-secondary/60 backdrop-blur-sm mb-4 pointer-events-auto">
+        <div className="relative w-full px-6 max-w-4xl flex flex-col items-center text-center z-20 mb-10">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border-accent bg-bg-secondary/60 backdrop-blur-sm mb-4">
             <Briefcase className="w-4 h-4 text-accent" />
             <span className="text-xs font-medium text-text-secondary tracking-wide uppercase">
               Career Journey
             </span>
           </div>
-          <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-text-primary mb-4 pointer-events-auto">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-text-primary mb-4">
             Experience
           </h2>
-          <p className="text-text-secondary max-w-xl text-center leading-relaxed pointer-events-auto">
+          <p className="text-sm sm:text-base text-text-secondary max-w-xl text-center leading-relaxed">
             A chronological journey from intern to software engineer at Light &amp;
             Wonder, specializing in performance engineering for the slot gaming
             industry.

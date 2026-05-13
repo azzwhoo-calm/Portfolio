@@ -5,7 +5,7 @@
    Import order matches the visual scroll order on the page.
    ============================================================================ */
 
-import Header from "./components/Header";
+
 import Hero from "./components/Hero";
 import Experience from "./components/Experience";
 import VideoGallery from "./components/VideoGallery";
@@ -17,12 +17,9 @@ export default function App() {
   return (
     <div className="bg-bg-primary text-text-primary">
       <CardsStack>
-        {/* Card 1: Above Experience */}
-        <div className="w-full flex flex-col min-h-screen">
-          <Header />
-          <div className="flex-1 flex flex-col items-center w-full">
-            <Hero />
-          </div>
+        {/* Card 1: Hero */}
+        <div className="w-full min-h-screen">
+          <Hero />
         </div>
 
         {/* Cards 2 to 5: Individual Experience Roles */}
